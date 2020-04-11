@@ -27,7 +27,8 @@ class Student
   sql = <<-SQL
   SELECT name
   FROM students
-  HAVING find
+  WHERE name = ?
+  LIMIT 1
   SQL
   DB[:conn].execute(sql)
     # find the student in the database given a name
