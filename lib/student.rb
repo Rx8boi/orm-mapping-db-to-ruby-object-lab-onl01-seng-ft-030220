@@ -9,7 +9,7 @@ class Student
   end
 
   def self.all
-  sql <<-SQL
+  sql = <<-SQL
   SELECT *
   FROM students
   SQL
